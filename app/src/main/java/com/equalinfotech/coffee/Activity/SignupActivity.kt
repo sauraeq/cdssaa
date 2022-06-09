@@ -115,7 +115,7 @@ class SignupActivity : BaseActivity(), View.OnClickListener, cont {
 
 
     fun signup() {
-      //  showProgressDialog()
+        showProgressDialog()
 
         var orderdilivery: Call<SignupResponse> = APIUtils.getServiceAPI()!!.signup(
             txt_username.text.toString(),
@@ -139,13 +139,11 @@ class SignupActivity : BaseActivity(), View.OnClickListener, cont {
 
                         if (response.body()!!.status == "success") {
                             data = response.body()!!.data
-                            showToastMessage(this@SignupActivity, response.body()!!.message)
                             opendilogfrombottomotp()
                         } else {
                             showToastMessage(this@SignupActivity, response.body()!!.message)
                         }
                     } else if (response.code() == 401) {
-                        showToastMessage(this@SignupActivity, response.body()!!.message)
                         finishAffinity()
                     } else if (response.code() == 400) {
                         hideProgressDialog()
@@ -154,14 +152,12 @@ class SignupActivity : BaseActivity(), View.OnClickListener, cont {
                     }
 
                 } catch (e: Exception) {
-                    showToastMessage(this@SignupActivity, e.toString())
-                    hideProgressDialog()
+
                 }
 
             }
 
             override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
-                showToastMessage(this@SignupActivity, t.toString())
                 hideProgressDialog()
             }
 

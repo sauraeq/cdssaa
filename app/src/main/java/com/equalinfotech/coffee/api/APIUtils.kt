@@ -7,7 +7,7 @@ class APIUtils {
 
     companion object {
 
-        private val BASE_URL = "http://dev.equalinfotech.in/coffeecup/ConsumerApi/"
+        private val BASE_URL = "https://www.g12ablesolutions.se/app/ConsumerApi/"
 
         fun getServiceAPI(): APIConfiguration? {
             return APIClient.getApiClient(BASE_URL)!!.create(APIConfiguration::class.java)
