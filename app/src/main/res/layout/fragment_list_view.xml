@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <!--
+                <TextView
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/task_listview"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:text="List View"
+                    android:textColor="@color/white"
+                    android:background="@drawable/cornerlogin"
+                    android:textSize="@dimen/_13sdp"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:text="Map View"
+                    android:textColor="@color/white"
+                    android:background="@drawable/cornerlogin"
+                    android:textSize="@dimen/_13sdp"
+                    />-->
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</LinearLayout>

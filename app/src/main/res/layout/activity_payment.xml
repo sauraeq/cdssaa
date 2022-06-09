@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@drawable/bottomcorner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_backnotificatio"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/arrowback"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp">
+
+        </ImageView>
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="Payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_15sdp">
+
+    <TextView
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment method"/>
+        <TextView
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose your prefer method to pay"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/grey_background"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_weight="1">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/user_profile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/creditcard"
+                app:civ_border_width="4dp"
+                app:civ_shadow_radius="@dimen/_8sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_profile"
+                android:text="Credit Crad"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/grey_background"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_weight="1">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/eruka"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/faktura"
+                app:civ_border_width="4dp"
+                app:civ_shadow_radius="@dimen/_8sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eruka"
+                android:text="Faktura"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/grey_background"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_weight="1">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/swish"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/swish"
+                app:civ_border_width="4dp"
+                app:civ_shadow_radius="@dimen/_8sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/swish"
+                android:text="Swish"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/grey_border"/>
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit Card Number"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/grey_border"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expire"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/grey_border"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:inputType="numberPassword"
+                android:background="@drawable/grey_border"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_signin"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_55sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:text="Pay"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:background="@drawable/cornerlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

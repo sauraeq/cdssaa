@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">G12able</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="how_its_work">How it works</string>
+    <string name="membership">Membership Plan</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="help_faq">Helo &amp; FAQ</string>
+    <string name="contect_us">Contact Us</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">548612209885748</string>
+    <string name="default_notification_channel_id" translatable="false">COffee_channel</string>
+</resources>
+

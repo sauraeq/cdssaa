@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/membership"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp">
+    <RelativeLayout
+        android:background="@drawable/bottomcorner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_backnotificatio"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/arrowback"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_memberback"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="Membership Plans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"></TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Your"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/purple_200"/>
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Plan"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/purple_200"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Yes I Want to Join as Member"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"/>
+
+
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="-80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/memberplanrecycle"/>
+
+
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Not a member yet"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_3sdp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/memneryetrecycle"/>
+    <TextView
+        android:id="@+id/txt_continue"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/cornerlogin"
+        android:layout_width="@dimen/_120sdp"
+        android:padding="@dimen/_7sdp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="notification">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/notification.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

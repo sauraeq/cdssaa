@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.PrivacyActivity">
+    <RelativeLayout
+        android:id="@+id/headar"
+        android:background="@drawable/bottomcorner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_backnotification"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/arrowback"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp">
+
+        </ImageView>
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="Terms &amp; Conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"></TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/termsimabe"
+        android:layout_below="@+id/headar"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ianass"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/termsandconditions"/>
+        <TextView
+            android:gravity="center"
+            android:layout_below="@+id/ianass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms &amp; Conditions"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/termsandcondionrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkboxrr"
+        android:layout_below="@+id/termsimabe"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:id="@+id/checkboxrr"
+        android:layout_above="@+id/continue_term"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:id="@+id/checkboxdata"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/checkboxdata"
+            android:text="I agree to the Terms and Conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/continue_term"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/cornerlogin"
+        android:layout_width="@dimen/_120sdp"
+        android:padding="@dimen/_7sdp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

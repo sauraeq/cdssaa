@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "728896327896",
+    "project_id": "coffeecup-985b0",
+    "storage_bucket": "coffeecup-985b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728896327896:android:05a527d3fdafaabbe1c7ad",
+        "android_client_info": {
+          "package_name": "com.equalinfotech.coffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728896327896-19plmj9ab25stpf2ud4825d21l9ds87a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.equalinfotech.coffee",
+            "certificate_hash": "dd9bd91ca5322c546c0b7c03b227ac3d6b2a010f"
+          }
+        },
+        {
+          "client_id": "728896327896-24m6slp5326sfibj4iab20qtn7agvan0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.equalinfotech.coffee",
+            "certificate_hash": "e34fcd063b7185790fb05e05f15efb2442acf586"
+          }
+        },
+        {
+          "client_id": "728896327896-jkben1ghh9tpius3lnblhpkr9bun1qmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx6QTFz2eHc6qfhstoRWxbPZ0_Bw5Y1uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728896327896-jkben1ghh9tpius3lnblhpkr9bun1qmj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "728896327896-mjrlt7gcjq71apbqtm1oqqm10mkg7d6v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.Reuseable-Coffee"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

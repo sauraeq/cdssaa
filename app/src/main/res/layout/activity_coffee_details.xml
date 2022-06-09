@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/blogimage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/_250sdp"
+            android:src="@drawable/details"/>
+
+        <ImageView
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:id="@+id/tv_backcoffeedetailss"
+            android:src="@drawable/arrowback"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="-50dp"
+        android:backgroundTint="@color/white"
+        android:id="@+id/card_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/blogtitle"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Coffee Details Rostars"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Swden 126"
+                    android:textSize="@dimen/_13sdp"
+
+                    />
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/location"/>
+                    <TextView
+
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Barsha Dubai"
+                        android:textSize="@dimen/_13sdp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Describtion"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/discrbtion"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="Dummy data is mock data generated at random as a substitute for live data in testing environments."
+
+                    />
+                <TextView
+                   android:layout_marginTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Today Offer"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"/>
+              <LinearLayout
+                  android:id="@+id/todayoffer"
+                  android:visibility="gone"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <ImageView
+                      android:id="@+id/iamgedata"
+                      android:layout_width="@dimen/_60sdp"
+                      android:layout_height="@dimen/_60sdp"
+                      android:src="@drawable/girl"/>
+                  <LinearLayout
+                      android:layout_marginStart="@dimen/_5sdp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="@dimen/_5sdp">
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Espesso"
+                          android:textSize="@dimen/_13sdp"
+                          android:textColor="@color/black"
+                          android:textStyle="bold"/>
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Health Benitifes Of Coffee"
+                          android:textSize="@dimen/_13sdp"
+
+                          />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="2 Coffee"
+                          android:textSize="@dimen/_13sdp"
+
+                          />
+                  </LinearLayout>
+
+              </LinearLayout>
+                <TextView
+                    android:id="@+id/booking_start"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:textAlignment="center"
+                    android:text="Booking Start"
+                    android:layout_marginHorizontal="@dimen/_50sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="@drawable/cornerlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
