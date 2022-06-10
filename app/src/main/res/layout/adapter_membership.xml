@@ -126,17 +126,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:background="@color/nevy">
+
         <TextView
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginStart="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Membership Fees= 100 SEK"
-            android:textSize="@dimen/_13sdp"
-            android:textStyle="bold"
-
             android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Membership Fees=20 SEK"
             android:textColor="@color/purple_200"
-            />
+
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
     </RelativeLayout>
 </LinearLayout>
