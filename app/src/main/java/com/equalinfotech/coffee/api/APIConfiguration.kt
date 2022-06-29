@@ -305,6 +305,20 @@ interface APIConfiguration {
         @Field("returnProduct") returnProduct: JSONArray,
     ): Call<ReturndataResponse>
 
+    @FormUrlEncoded
+    @POST("returnProductSingle")
+    @Headers("Content-Type:application/x-www-form-urlencoded")
+    fun returnsingleProduct(
+
+        @Field("consumerId") consumerId: String,
+        @Field("token") token: String,
+        @Field("hostId") hostId: String,
+        @Field("cart_id") cart_id: String,
+        @Field("quantity") quantity: String,
+
+
+    ): Call<ReturnByIdResponse>
+
 
     @FormUrlEncoded
     @POST("updateLatLong")

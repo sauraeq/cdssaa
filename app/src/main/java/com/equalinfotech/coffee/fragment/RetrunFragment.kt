@@ -39,16 +39,20 @@ class RetrunFragment : Fragment() {
         Log.e("returndata", (context as OrderReturnActivity).returndata.toString())
         sharprf = shareprefrences(requireActivity())
         list = arrayListOf<Requestdata>()
+
         if ((context as OrderReturnActivity).returndata.size > 0) {
             errrortest.visibility = View.GONE
-            btn_return.visibility = View.VISIBLE
+            btn_return.visibility = View.GONE
         } else {
             errrortest.visibility = View.VISIBLE
             btn_return.visibility = View.GONE
         }
         return_recycle.layoutManager = LinearLayoutManager(activity)
         return_recycle.adapter =
-            ReturnAdapter(requireActivity(), (context as OrderReturnActivity).returndata)
+            ReturnAdapter(requireActivity(), (context as OrderReturnActivity).returndata,
+                sharprf.getStringPreference((context as OrderReturnActivity).Token).toString(),
+                sharprf.getStringPreference((context as OrderReturnActivity).USER_ID)
+                    .toString(), (context as OrderReturnActivity).hostid,)
         btn_return.setOnClickListener {
             returndata()
         }

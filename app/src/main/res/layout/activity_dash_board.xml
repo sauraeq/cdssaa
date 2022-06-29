@@ -144,8 +144,8 @@
                 android:id="@+id/barcaode"
                 android:layout_width="@dimen/_35sdp"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_centerInParent="true"
 
+                android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_30sdp"
                 android:src="@drawable/homebarcode" />

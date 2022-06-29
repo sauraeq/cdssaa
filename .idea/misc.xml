@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/activity_bar_code.xml" value="0.20416666666666666" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/activity_booking.xml" value="0.20416666666666666" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/activity_dash_board.xml" value="0.20416666666666666" />
         <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/activity_membership_plan.xml" value="0.1" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/activity_order_return.xml" value="0.20416666666666666" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/adapter_booking.xml" value="0.20416666666666666" />
         <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/adapter_membership.xml" value="0.1685185185185185" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/adapter_return.xml" value="0.20416666666666666" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/fragment_order.xml" value="0.20416666666666666" />
+        <entry key="..\:/finalproject/Coffee/app/src/main/res/layout/fragment_retrun.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

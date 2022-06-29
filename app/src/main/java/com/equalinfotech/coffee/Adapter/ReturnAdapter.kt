@@ -1,6 +1,8 @@
 package com.equalinfotech.coffee.Adapter
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,20 +10,37 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.equalinfotech.coffee.Activity.OrderReturnActivity
+import com.equalinfotech.coffee.Activity.OrderSucessfullActivity
 import com.equalinfotech.coffee.R
+import com.equalinfotech.coffee.api.APIUtils
+import com.equalinfotech.coffee.modal.ReturnByIdResponse
+import com.equalinfotech.coffee.modal.ReturndataResponse
 import com.equalinfotech.coffee.modal.ScanDataResponse
 import kotlinx.android.synthetic.main.adapter_return.view.*
+import org.json.JSONArray
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class ReturnAdapter(var context: Context,var returnlist:ArrayList<ScanDataResponse.Data.ProductReturn>):RecyclerView.Adapter<ReturnAdapter.ReturnHolder>() {
+class ReturnAdapter(var context: Context,var returnlist:ArrayList<ScanDataResponse.Data.ProductReturn>,var user_id:String, var Token:String,var host_id:String):RecyclerView.Adapter<ReturnAdapter.ReturnHolder>() {
    inner class ReturnHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+       var cart_id:String=""
        init {
            itemView.minius.setOnClickListener {
+
                if((context as OrderReturnActivity).returndata[position].quantity!=1){
                    addsub(adapterPosition,itemView.quanty,"sub")
                }
            }
            itemView.add.setOnClickListener {
                addsub(adapterPosition,itemView.quanty,"add")
+
+           }
+           itemView.return_image.setOnClickListener {
+               notifyDataSetChanged()
+               cart_id=(context as OrderReturnActivity).returndata[position].cart_id
+               returnbyid(cart_id)
 
            }
        }
@@ -67,4 +86,65 @@ class ReturnAdapter(var context: Context,var returnlist:ArrayList<ScanDataRespon
         (context as OrderReturnActivity).returndata[position].quantity=returnlist[position].quantity
         textView.text==returnlist[position].quantity.toString()
     }
-}
+
+    fun returnbyid(cartid:String) {
+
+            (context as OrderReturnActivity).showProgressDialog()
+            var orderdilivery: Call<ReturnByIdResponse> =APIUtils.getServiceAPI()!!.returnsingleProduct(Token,user_id,host_id,cartid,"1")
+            orderdilivery.enqueue(object : Callback<ReturnByIdResponse> {
+                override fun onResponse(
+                    call: Call<ReturnByIdResponse>,
+                    response: Response<ReturnByIdResponse>
+                ) {
+
+                    try {
+
+                        if (response.code() == 200) {
+                            (context as OrderReturnActivity).hideProgressDialog()
+                            if (response.body()!!.status == "success") {
+                                (context as OrderReturnActivity).showToastMessage(
+                                    context,
+                                    response.body()!!.message
+                                )
+
+                                context.startActivity(Intent(context, OrderSucessfullActivity::class.java))
+
+                            } else {
+                                (context as OrderReturnActivity).showToastMessage(
+                                    context,
+                                    response.body()!!.message
+                                )
+                            }
+
+                        } else if (response.code() == 401) {
+
+
+                            (context as OrderReturnActivity).finishAffinity()
+
+
+                        } else if (response.code() == 400) {
+                            (context as OrderReturnActivity).hideProgressDialog()
+                            (context as OrderReturnActivity).showToastMessage(
+                                context,
+                                response.body()!!.message
+                            )
+
+                        }
+
+                    } catch (e: Exception) {
+                        (context as OrderReturnActivity).showToastMessage(
+                            context,
+                            e.toString()
+                        )
+                    }
+
+                }
+
+                override fun onFailure(call: Call<ReturnByIdResponse>, t: Throwable) {
+                    (context as OrderReturnActivity).hideProgressDialog()
+                }
+
+            })
+        }
+
+    }

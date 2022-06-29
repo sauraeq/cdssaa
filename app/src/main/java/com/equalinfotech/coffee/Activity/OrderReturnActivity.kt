@@ -90,6 +90,8 @@ class OrderReturnActivity : BaseActivity(), cont {
                 response: Response<ScanDataResponse>
             ) {
                 try {
+                    returndata.clear()
+                    bookingitem.clear()
                     if (response.code() == 200) {
                         hideProgressDialog()
                         if (response.body()!!.status == "success") {
